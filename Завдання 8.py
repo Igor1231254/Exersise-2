@@ -1,25 +1,12 @@
-#А
-a, b = 0, 1
+def check_number_properties(number):
+    if number % 2 == 0:
+        print(f"{number} є парним.")
+        if number % 4 == 0:
+            print(f"{number} також кратне 4.")
+        else:
+            print(f"{number} не кратне 4.")
+    else:
+        print(f"{number} є непарним.")
 
-
-print("Перші 20 чисел ряду Фібоначчі:")
-for _ in range(20):
-    print(a, end=" ")
-    a, b = b, a + b
-print()
-
-#B
-print("Парні числа від 0 до 20:")
-number = 0
-while number <= 20:
-    print(number, end=" ")
-    number += 2
-print()
-
-
-print("Кожне третє число від -1 до -21:")
-number = -1
-while number >= -21:
-    print(number, end=" ")
-    number -= 3
-print()
+number = int(input("Введіть натуральне число: "))
+check_number_properties(number)
